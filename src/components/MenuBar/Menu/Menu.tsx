@@ -78,7 +78,7 @@ export default function Menu(props: { buttonClassName?: string }) {
           <IconContainer>
             <SettingsIcon />
           </IconContainer>
-          <Typography variant="body1">Audio and Video Settings</Typography>
+          <Typography variant="body2">Audio and Video Settings</Typography>
         </MenuItem>
 
         {isSupported && (
@@ -92,7 +92,7 @@ export default function Menu(props: { buttonClassName?: string }) {
             <IconContainer>
               <BackgroundIcon />
             </IconContainer>
-            <Typography variant="body1">Backgrounds</Typography>
+            <Typography variant="body2">Backgrounds</Typography>
           </MenuItem>
         )}
 
@@ -101,7 +101,7 @@ export default function Menu(props: { buttonClassName?: string }) {
             <IconContainer>
               <FlipCameraIcon />
             </IconContainer>
-            <Typography variant="body1">Flip Camera</Typography>
+            <Typography variant="body2">Flip Camera</Typography>
           </MenuItem>
         )}
 
@@ -119,7 +119,7 @@ export default function Menu(props: { buttonClassName?: string }) {
             data-cy-recording-button
           >
             <IconContainer>{isRecording ? <StopRecordingIcon /> : <StartRecordingIcon />}</IconContainer>
-            <Typography variant="body1">{isRecording ? 'Stop' : 'Start'} Recording</Typography>
+            <Typography variant="body2">{isRecording ? 'Stop' : 'Start'} Recording</Typography>
           </MenuItem>
         )}
 
@@ -132,7 +132,7 @@ export default function Menu(props: { buttonClassName?: string }) {
           <IconContainer>
             <SearchIcon style={{ fill: '#707578', width: '0.9em' }} />
           </IconContainer>
-          <Typography variant="body1">Room Monitor</Typography>
+          <Typography variant="body2">Room Monitor</Typography>
         </MenuItem>
 
         <MenuItem
@@ -148,14 +148,14 @@ export default function Menu(props: { buttonClassName?: string }) {
               <GridViewIcon style={{ fill: '#707578', width: '0.9em' }} />
             )}
           </IconContainer>
-          <Typography variant="body1">{isGalleryViewActive ? 'Speaker View' : 'Gallery View'}</Typography>
+          <Typography variant="body2">{isGalleryViewActive ? 'Speaker View' : 'Gallery View'}</Typography>
         </MenuItem>
 
         <MenuItem onClick={() => setAboutOpen(true)}>
           <IconContainer>
             <InfoIconOutlined />
           </IconContainer>
-          <Typography variant="body1">About</Typography>
+          <Typography variant="body2">About</Typography>
         </MenuItem>
       </MenuContainer>
       <AboutDialog

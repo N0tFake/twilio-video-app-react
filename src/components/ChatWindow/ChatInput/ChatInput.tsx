@@ -11,7 +11,6 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 const useStyles = makeStyles(theme => ({
   chatInputContainer: {
     borderTop: '1px solid #e4e7e9',
-    borderBottom: '1px solid #e4e7e9',
     padding: '1em 1.2em 1em',
   },
   textArea: {

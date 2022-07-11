@@ -12,6 +12,7 @@ import useVideoContext from '../../../hooks/useVideoContext/useVideoContext';
 
 const useStyles = makeStyles((theme: Theme) => ({
   gutterBottom: {
+    color: 'white',
     marginBottom: '1em',
   },
   marginTop: {
@@ -79,7 +80,7 @@ export default function DeviceSelectionScreen({ name, roomName, setStep }: Devic
           <CircularProgress variant="indeterminate" />
         </div>
         <div>
-          <Typography variant="body2" style={{ fontWeight: 'bold', fontSize: '16px' }}>
+          <Typography variant="body1" style={{ fontWeight: 'bold', fontSize: '16px' }}>
             Joining Meeting
           </Typography>
         </div>
@@ -115,7 +116,7 @@ export default function DeviceSelectionScreen({ name, roomName, setStep }: Devic
               </Hidden>
             </div>
             <div className={classes.joinButtons}>
-              <Button variant="outlined" color="primary" onClick={() => setStep(Steps.roomNameStep)}>
+              <Button variant="outlined" color="secondary" onClick={() => setStep(Steps.roomNameStep)}>
                 Cancel
               </Button>
               <Button

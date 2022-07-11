@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
       zIndex: 9,
       display: 'flex',
       flexDirection: 'column',
+      borderRadius: '20px',
       borderLeft: '1px solid #E4E7E9',
       [theme.breakpoints.down('sm')]: {
         position: 'fixed',

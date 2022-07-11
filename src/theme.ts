@@ -44,7 +44,7 @@ export default createTheme({
       root: {
         borderRadius: '4px',
         textTransform: 'none',
-        color: 'rgb(40, 42, 43)',
+        color: 'rgb(255, 255, 255)',
         fontSize: '0.9rem',
         transition: defaultTheme.transitions.create(['background-color', 'box-shadow', 'border', 'color'], {
           duration: defaultTheme.transitions.duration.short,
@@ -65,12 +65,30 @@ export default createTheme({
           border: '2px solid rgb(1, 85, 137)',
         },
       },
+      outlined: {
+        primary: {
+          border: '2px solid #027AC5',
+          '&:hover': {
+            border: '2px solid rgb(1, 85, 137)',
+          },
+        },
+        secondary: {
+          border: '2px solid #600101',
+          '&:hover': {
+            border: '2px solid rgb(96, 1, 1)',
+          },
+        },
+      },
       startIcon: {
         marginRight: '6px',
       },
     },
     MuiTypography: {
       body1: {
+        color: 'rgb(255, 255, 255)',
+        fontSize: '0.9rem',
+      },
+      body2: {
         color: 'rgb(40, 42, 43)',
         fontSize: '0.9rem',
       },
@@ -97,7 +115,7 @@ export default createTheme({
     },
     MuiInputLabel: {
       root: {
-        color: 'rgb(40, 42, 43)',
+        color: 'rgb(255, 255, 255)',
         fontSize: '1.1rem',
         marginBottom: '0.2em',
         fontWeight: 500,
@@ -126,5 +144,5 @@ export default createTheme({
   participantBorderWidth: 2,
   mobileTopBarHeight: 52,
   rightDrawerWidth: 320,
-  galleryViewBackgroundColor: '#121C2D',
+  galleryViewBackgroundColor: '#212024',
 });

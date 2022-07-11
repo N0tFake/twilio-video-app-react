@@ -17,7 +17,7 @@ import ToggleScreenShareButton from '../Buttons/ToogleScreenShareButton/ToggleSc
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.galleryViewBackgroundColor,
       bottom: 0,
       left: 0,
       right: 0,
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '104px',
       background: 'rgba(0, 0, 0, 0.5)',
       '& h6': {
-        color: 'white',
+        color: 'red',
       },
       '& button': {
         background: 'white',

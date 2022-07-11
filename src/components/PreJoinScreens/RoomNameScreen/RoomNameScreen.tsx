@@ -1,10 +1,11 @@
 import React, { ChangeEvent, FormEvent } from 'react';
-import { Typography, makeStyles, TextField, Grid, Button, InputLabel, Theme } from '@material-ui/core';
+import { Typography, makeStyles, TextField, Button, InputLabel, Theme } from '@material-ui/core';
 import { useAppState } from '../../../state';
 
 const useStyles = makeStyles((theme: Theme) => ({
   gutterBottom: {
     marginBottom: '1em',
+    color: 'white',
   },
   inputContainer: {
     display: 'flex',
@@ -17,8 +18,17 @@ const useStyles = makeStyles((theme: Theme) => ({
       margin: '1.5em 0 2em',
     },
   },
+  inputColor: {
+    color: 'white',
+  },
   textFieldContainer: {
     width: '100%',
+  },
+  containerButton: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '2em',
   },
   continueButton: {
     [theme.breakpoints.down('sm')]: {
@@ -71,6 +81,9 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
                 variant="outlined"
                 fullWidth
                 size="small"
+                inputProps={{
+                  className: classes.inputColor,
+                }}
                 value={name}
                 onChange={handleNameChange}
               />
@@ -86,22 +99,26 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
               variant="outlined"
               fullWidth
               size="small"
+              inputProps={{
+                className: classes.inputColor,
+              }}
               value={roomName}
               onChange={handleRoomNameChange}
             />
           </div>
         </div>
-        <Grid container justifyContent="flex-end">
+        <div className={classes.containerButton}>
           <Button
             variant="contained"
             type="submit"
             color="primary"
             disabled={!name || !roomName}
             className={classes.continueButton}
+            fullWidth
           >
             Continue
           </Button>
-        </Grid>
+        </div>
       </form>
     </>
   );

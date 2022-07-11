@@ -14,6 +14,8 @@ const useStyles = makeStyles(() =>
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '0 1em',
+      borderTopLeftRadius: '20px',
+      borderTopRightRadius: '20px',
     },
     text: {
       fontWeight: 'bold',
